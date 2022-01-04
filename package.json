@@ -4,9 +4,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "bulid:dev": "tsc && vite build",
+    "build:final": "env-cmd -f ./final/.env tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "env-cmd": "^10.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
