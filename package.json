@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "bulid:dev": "tsc && vite build",
+    "build:dev": "tsc && vite build",
     "build:prod": "env-cmd -f ./prod/.env tsc && vite build",
     "preview": "vite preview",
     "prettier": "prettier -w src"
