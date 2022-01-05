@@ -1,0 +1,8 @@
+schema: https://api.spacex.land/graphql
+generates:
+  ./src/schema.ts:
+    config:
+      scalrars:
+        timestamptz: "string"
+    plugins:
+      - typescript
