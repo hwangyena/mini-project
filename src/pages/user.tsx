@@ -1,19 +1,24 @@
 import { useQuery } from "@apollo/client";
 import QUERIES from "src/apis/queries";
-import { dummyData } from "src/dummy";
-// import { dummyData } from "../dummy";
 import { Query, QueryUsersArgs } from "src/schema";
 
 const UserPage = () => {
-  // const { data } = useQuery<{ v: Query["users"] }, QueryUsersArgs>(
-  //   QUERIES.Users,
-  //   {
-  //     variables: {},
-  //   }
-  // );
+  const { data } = useQuery<{ users: Query["users"] }, QueryUsersArgs>(
+    QUERIES.Users
+  );
+
   return (
     <>
-      <h1>{dummyData}</h1>
+      <h1>User Page</h1>
+      {data?.users.map((v) => (
+        <section key={v.id}>
+          <ul>
+            <li>{`name: ${v.name}`}</li>
+            <li>{`rocket: ${v.rocket}`}</li>
+            <li>{`timestamp: ${v.timestamp}`}</li>
+          </ul>
+        </section>
+      ))}
     </>
   );
 };
