@@ -1,4 +1,6 @@
 :root {
+  --black: #242424;
+
   --purple: #8946a6;
   --pink: #ffcddd;
 }
@@ -18,5 +20,6 @@ button {
   padding: 10px 20px;
   min-height: 100vh;
   background: linear-gradient(var(--purple), var(--pink));
+  overflow: hidden;
   /* padding: 50px; */
 }

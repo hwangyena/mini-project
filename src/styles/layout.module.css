@@ -66,4 +66,23 @@
 
 /* sidebar items */
 .items {
+  margin-top: 70px;
+  padding: 0 22px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.items > a:visited,
+.items > a:link {
+  color: var(--purple);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.items > a > li {
+  list-style: none;
+  text-decoration: none;
 }
