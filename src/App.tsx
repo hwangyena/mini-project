@@ -1,8 +1,8 @@
 import { ApolloProvider } from "@apollo/client";
 import { lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useOutletContext } from "react-router-dom";
 import client from "./apis/client";
-import LayoutContainer from "./components/layout";
+import LayoutContainer, { useOpen } from "./components/layout";
 import "./styles/global.css";
 
 const HomePage = lazy(() => import("./pages/home"));

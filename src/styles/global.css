@@ -16,10 +16,9 @@ button {
 }
 
 .layout {
-  margin-left: 200px;
-  padding: 10px 20px;
+  padding: 10px 0 10px 75px;
   min-height: 100vh;
   background: linear-gradient(var(--purple), var(--pink));
   overflow: hidden;
-  /* padding: 50px; */
+  color: #fff;
 }

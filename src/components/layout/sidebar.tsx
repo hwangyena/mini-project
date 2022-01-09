@@ -17,6 +17,7 @@ const sidebarBackground: Variants = {
     clipPath: "circle(20px at 30px 30px)",
     transition: {
       delay: 0.3,
+      // bounce: 0.5,
       type: "spring",
       stiffness: 500,
       damping: 100, //속도
@@ -24,23 +25,26 @@ const sidebarBackground: Variants = {
   },
 };
 
-const Sidebar = () => {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+interface Props {
+  isOpen: boolean;
+  onToggleNav: () => void;
+}
+
+const Sidebar = ({ isOpen, onToggleNav }: Props) => {
   const navRef = useRef<HTMLElement>(null);
-  const height = navRef.current?.getBoundingClientRect().height;
 
   return (
     <motion.nav
       className={s.sidebar}
       ref={navRef}
-      animate={isOpen ? "open" : "closed"}
+      // animate={isOpen ? "open" : "closed"}
     >
       <motion.div
         initial={false}
         className={cn(s.bg, isOpen && s.open)}
         variants={sidebarBackground}
       >
-        <button className={s.burger} onClick={() => toggleOpen()}>
+        <button className={s.burger} onClick={onToggleNav}>
           <span />
           <span />
           <span />

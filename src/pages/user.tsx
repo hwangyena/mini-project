@@ -8,7 +8,7 @@ const UserPage = () => {
   );
 
   return (
-    <article className="layout">
+    <article>
       <h1>User Page</h1>
       {data?.users.map((v) => (
         <section key={v.id}>

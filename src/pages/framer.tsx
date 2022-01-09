@@ -13,7 +13,7 @@ const FramerPage = () => {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <article className="layout">
+    <article>
       <MotionDivWrapper
         animate={{
           scale: [1, 2, 2, 2, 1],
