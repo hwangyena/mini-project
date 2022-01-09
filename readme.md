@@ -1,3 +1,10 @@
-# framer 실습
+# 👀 해보고싶은것 이모저모 모아보기
+```
+1. graphql 데이터 연동
+2. framer motion
+3. HTML5 canvas
+```
 
-https://www.framer.com/docs/examples/ 참고 사이트
+### 참고 사이트
+https://www.framer.com/docs/examples/ 참고 사이트    
+https://www.framer.com/docs/examples/ framer library

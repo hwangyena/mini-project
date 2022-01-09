@@ -1,4 +1,3 @@
-import { Canvas } from "@react-three/fiber";
 import { motion, useMotionValue } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
