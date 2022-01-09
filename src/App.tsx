@@ -5,7 +5,7 @@ import client from "./apis/client";
 import LayoutContainer from "./components/layout";
 import "./styles/global.css";
 
-const MainPage = lazy(() => import("./pages/main"));
+const HomePage = lazy(() => import("./pages/home"));
 const UserPage = lazy(() => import("./pages/user"));
 const FramperPage = lazy(() => import("./pages/framer"));
 
@@ -14,6 +14,7 @@ function App() {
     <ApolloProvider client={client}>
       <Routes>
         <Route path="/" element={<LayoutContainer />}>
+          <Route index element={<HomePage />} />
           <Route path="user" element={<UserPage />} />
           <Route path="framer" element={<FramperPage />} />
         </Route>
