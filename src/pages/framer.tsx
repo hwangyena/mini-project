@@ -3,15 +3,6 @@ import { motion, useMotionValue } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.article`
-  --purple: #8946a6;
-  --pink: #ffcddd;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(var(--purple), var(--pink));
-  padding: 50px;
-`;
-
 const MotionDivWrapper = styled(motion.div)`
   background: #fff;
   width: 50px;
@@ -22,12 +13,13 @@ const FramerPage = () => {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <Wrapper>
+    <article className="layout">
       <MotionDivWrapper
         animate={{
           scale: [1, 2, 2, 2, 1],
-          rotate: [0, 0, 270, 270, 0],
-          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          rotate: [0, 0, 270, 0, 0],
+          borderRadius: ["20%", "20%", "50%", "20%", "20%"],
+          // borderRadius: ["20%", "20%", "50%", "50%", "20%"],
         }}
         transition={{
           duration: 3,
@@ -39,7 +31,7 @@ const FramerPage = () => {
         // onHoverStart={() => setIsHover(true)}
         // onHoverEnd={() => setIsHover(false)}
       />
-    </Wrapper>
+    </article>
   );
 };
 

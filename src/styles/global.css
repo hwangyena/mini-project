@@ -1,0 +1,22 @@
+:root {
+  --purple: #8946a6;
+  --pink: #ffcddd;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.layout {
+  margin-left: 200px;
+  padding: 10px 20px;
+  min-height: 100vh;
+  background: linear-gradient(var(--purple), var(--pink));
+  /* padding: 50px; */
+}

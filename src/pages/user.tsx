@@ -8,7 +8,7 @@ const UserPage = () => {
   );
 
   return (
-    <>
+    <article className="layout">
       <h1>User Page</h1>
       {data?.users.map((v) => (
         <section key={v.id}>
@@ -19,7 +19,7 @@ const UserPage = () => {
           </ul>
         </section>
       ))}
-    </>
+    </article>
   );
 };
 export default UserPage;

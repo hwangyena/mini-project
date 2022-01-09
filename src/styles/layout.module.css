@@ -1,0 +1,48 @@
+.sidebar {
+  position: absolute;
+  background: #fff;
+  width: 200px;
+  top: 0;
+  left: 0;
+}
+
+/* burger button */
+.burger {
+  background: var(--purple);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  overflow: hidden;
+}
+
+.burger > span {
+  width: 27px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.5s ease-out;
+  position: absolute;
+}
+
+.burger > span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.burger > span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+.open > span:nth-child(1) {
+  transform: rotate(45deg);
+  transition-delay: 0.25s;
+}
+.open > span:nth-child(2) {
+  transform: translateX(70px);
+}
+.open > span:nth-child(3) {
+  transition-delay: 0.25s;
+  transform: translateY(0px) rotate(135deg);
+}
